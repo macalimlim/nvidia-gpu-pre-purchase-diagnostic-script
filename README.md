@@ -1,6 +1,6 @@
 # NVIDIA GPU Pre-Purchase Diagnostic Script
 
-A lightweight Linux diagnostic script for evaluating a used NVIDIA GPU, with particular emphasis on the VRAM, sustained workloads, temperatures, power consumption, VBIOS information, and NVIDIA Xid errors.
+A lightweight Linux diagnostic script for evaluating a used NVIDIA GPU, with particular emphasis on the VRAM, sustained workloads, temperatures, power consumption, VBIOS information, VRAM errors, and NVIDIA Xid errors.
 
 This is intended to help evaluate a used GPU before purchasing it, especially cards that have been used for different kinds of workload like 3D gaming, local LLM inference, crypto mining, etc..
 
@@ -21,6 +21,7 @@ The script checks and monitors:
 🔌 PCIe device information
 🚨 NVIDIA Xid errors in the kernel journal
 🧮 CUDA compiler availability
+🧠 VRAM errors
 📈 Continuous GPU monitoring
 📝 Automatic test log
 
@@ -33,6 +34,7 @@ The script requires:
 - nvidia-smi
 - lspci
 - journalctl
+- memtest_vulkan
 
 On Linux, nvidia-smi should normally be available if the NVIDIA driver is correctly configured.
 
