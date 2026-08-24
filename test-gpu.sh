@@ -123,10 +123,27 @@ fi
 echo
 
 # ------------------------------------------------
-# 8. Continuous monitoring
+# 8. Vulkan GPU memory test
 # ------------------------------------------------
 
-echo "[8] LIVE MONITORING"
+echo "[8] VULKAN VRAM TEST (memtest_vulkan)"
+echo "----------------------------------------------"
+
+if command -v memtest_vulkan >/dev/null 2>&1; then
+    echo "Starting memtest_vulkan..."
+    echo
+    memtest_vulkan
+else
+    echo "memtest_vulkan not installed."
+fi
+
+echo
+
+# ------------------------------------------------
+# 9. Continuous monitoring
+# ------------------------------------------------
+
+echo "[9] LIVE MONITORING"
 echo "----------------------------------------------"
 
 echo "The following values will be sampled every second."
