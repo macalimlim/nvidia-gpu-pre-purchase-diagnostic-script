@@ -34,6 +34,7 @@ The script requires:
 - nvidia-smi
 - lspci
 - journalctl
+- nvcc
 - memtest_vulkan
 
 On Linux, nvidia-smi should normally be available if the NVIDIA driver is correctly configured.
